@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- Custom Style Sheet (with cache buster) -->
-    <link rel="stylesheet" href="style.css?v=5.0">
+    <link rel="stylesheet" href="style.css?v=6.0">
     <!-- Hero Sports Atmosphere CSS fallback & immediate override -->
     <style id="hero-sports-decorations-css">
         .hero-sports-decorations {
@@ -2883,45 +2883,28 @@
         </div>
     </footer>
 
-    <!-- ================= COOKIE CONSENT & DEVICE CACHING BANNER ================= -->
-    <div id="wxh-cookie-banner" class="wxh-cookie-banner" role="dialog" aria-modal="true" aria-labelledby="wxh-cookie-title" aria-describedby="wxh-cookie-desc">
+    <!-- ================= COMPACT COOKIE NOTICE ================= -->
+    <div id="wxh-cookie-banner" class="wxh-cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie consent">
         <div class="wxh-cookie-card">
-            <div class="wxh-cookie-header">
-                <div class="wxh-cookie-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wxh-cookie-icon">
-                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                        <path d="M8.5 8.5v.01"></path>
-                        <path d="M7.5 15.5v.01"></path>
-                        <path d="M12 12v.01"></path>
-                        <path d="M11 17v.01"></path>
-                        <path d="M16 16v.01"></path>
-                    </svg>
-                    <span>Fast Caching &amp; Cookies</span>
-                </div>
-                <button type="button" id="wxh-cookie-close" class="wxh-cookie-close-btn" aria-label="Dismiss cookie notice">&times;</button>
-            </div>
-            <div class="wxh-cookie-body">
-                <h4 id="wxh-cookie-title" class="wxh-cookie-heading">Device Storage &amp; Cookies</h4>
-                <p id="wxh-cookie-desc" class="wxh-cookie-text">
-                    We use cookies and high-speed local browser caching so site assets save directly on your device. This eliminates redundant server roundtrips, ensures near-instant repeat page loads, and keeps your preferences active.
-                </p>
+            <div class="wxh-cookie-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wxh-cookie-icon">
+                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                    <circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle>
+                    <circle cx="7.5" cy="14.5" r="1" fill="currentColor"></circle>
+                    <circle cx="12" cy="12" r="1" fill="currentColor"></circle>
+                </svg>
+                <span class="wxh-cookie-text">We use cookies to ensure optimal speed and performance on your device.</span>
             </div>
             <div class="wxh-cookie-actions">
-                <button type="button" id="wxh-cookie-accept-all" class="btn btn-primary wxh-cookie-btn-primary">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-check-icon">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    Accept All &amp; Cache
-                </button>
-                <button type="button" id="wxh-cookie-essential" class="btn btn-secondary wxh-cookie-btn-secondary">
-                    Essential Only
-                </button>
+                <button type="button" id="wxh-cookie-accept-all" class="wxh-cookie-btn-accept">Accept</button>
+                <button type="button" id="wxh-cookie-essential" class="wxh-cookie-btn-decline">Decline</button>
+                <button type="button" id="wxh-cookie-close" class="wxh-cookie-close-btn" aria-label="Close">&times;</button>
             </div>
         </div>
     </div>
 
     <!-- Custom Script -->
-    <script src="app.js?v=2.2"></script>
+    <script src="app.js?v=2.3"></script>
     <!-- WebXHere AI Chatbot -->
     <script src="chatbot.js" defer></script>
 </body>
