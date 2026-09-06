@@ -1,4 +1,4 @@
-﻿# WEBXHERE Studio - AI-Powered Sports Club Websites
+# WEBXHERE Studio - AI-Powered Sports Club Websites
 
 > Premium, conversion-focused websites exclusively crafted for sports organizations, tennis clubs, chess academies, and badminton centers.
 
@@ -58,6 +58,7 @@ python -m http.server 8000
 
 **Sujal Prajapati**
 - GitHub: [@sujal906](https://github.com/sujal906)
+- Instagram: [@webxherestudio](https://www.instagram.com/webxherestudio)
 - Agency: **WEBXHERE Studio**
 - Consultation: [Book a 30-min Call](https://calendly.com/sujalprajapati7217/30min)
 
