@@ -5310,6 +5310,21 @@ video.macbook-screen-content {
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
+    .header-container {
+        justify-content: center !important;
+        position: relative;
+        padding: 0 !important;
+    }
+
+    .logo-link {
+        margin: 0 auto !important;
+        justify-content: center !important;
+    }
+
+    .header-actions {
+        display: none !important;
+    }
+
     .brand-logo {
         width: 32px;
         height: 32px;
