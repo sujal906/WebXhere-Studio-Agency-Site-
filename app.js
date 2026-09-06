@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const noteCounter = document.getElementById('c-note-counter');
 
     // Web3Forms API Key
-    const WEB3FORMS_ACCESS_KEY = '75ea74ca-c78a-4e4e-a5fb-fa01750e0732';
+    const WEB3FORMS_ACCESS_KEY = '887ad9ac-d4ad-433a-92e9-c36ffdcdccd9';
 
     if (noteInput && noteCounter) {
         noteInput.addEventListener('input', () => {
@@ -246,9 +246,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 const formData = new FormData(mainContactForm);
-                formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-                formData.append('subject', 'New Sports Club Inquiry - WebXHere Studio');
-                formData.append('from_name', 'WebXHere Studio Website');
+                formData.set('access_key', WEB3FORMS_ACCESS_KEY);
+                formData.set('subject', 'New Sports Club Inquiry - WebXHere Studio');
+                formData.set('from_name', 'WebXHere Studio Website');
 
                 const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
