@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- Custom Style Sheet (with cache buster) -->
-    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="style.css?v=5.0">
     <!-- Hero Sports Atmosphere CSS fallback & immediate override -->
     <style id="hero-sports-decorations-css">
         .hero-sports-decorations {
@@ -21,7 +21,8 @@
             top: 0 !important;
             left: 0 !important;
             right: 0 !important;
-            height: 700px !important;
+            bottom: 0 !important;
+            height: 100% !important;
             pointer-events: none !important;
             z-index: 1 !important;
             overflow: hidden !important;
@@ -45,17 +46,18 @@
         .sport-deco-item.deco-flip svg {
             transform: scaleX(-1);
         }
+        /* No Glow, crisp clean colors */
         .sport-deco-item.deco-sport-chess {
-            color: #78b0f4 !important;
-            filter: drop-shadow(0 0 10px rgba(0, 110, 255, 0.75)) drop-shadow(0 0 20px rgba(120, 176, 244, 0.45)) !important;
+            color: #6ba6f3 !important;
+            filter: none !important;
         }
         .sport-deco-item.deco-sport-tennis {
             color: #60a5fa !important;
-            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.75)) drop-shadow(0 0 20px rgba(96, 165, 250, 0.45)) !important;
+            filter: none !important;
         }
         .sport-deco-item.deco-sport-badminton {
             color: #93c5fd !important;
-            filter: drop-shadow(0 0 10px rgba(147, 197, 253, 0.75)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.4)) !important;
+            filter: none !important;
         }
         @keyframes sportsFloat1 {
             0%, 100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
@@ -69,37 +71,41 @@
             0%, 100% { transform: translateY(0px) scale(1) rotate(var(--rot, 0deg)); }
             50% { transform: translateY(-9px) scale(1.03) rotate(calc(var(--rot, 0deg) + 2deg)); }
         }
-        /* Left zone - 8 items */
-        .deco-l-1 { top: 25px !important; left: 3.5% !important; width: 68px !important; height: 68px !important; opacity: 0.44 !important; --rot: -12deg; animation: sportsFloat1 9s ease-in-out infinite; }
-        .deco-l-2 { top: 95px !important; left: 13.5% !important; width: 62px !important; height: 62px !important; opacity: 0.40 !important; --rot: 22deg; animation: sportsFloat2 10.5s ease-in-out infinite; }
-        .deco-l-3 { top: 195px !important; left: 3% !important; width: 66px !important; height: 66px !important; opacity: 0.45 !important; --rot: -18deg; animation: sportsFloat3 8.5s ease-in-out infinite; }
-        .deco-l-4 { top: 315px !important; left: 11% !important; width: 62px !important; height: 62px !important; opacity: 0.42 !important; --rot: 10deg; animation: sportsFloat1 11s ease-in-out infinite; }
-        .deco-l-5 { top: 425px !important; left: 3.8% !important; width: 50px !important; height: 50px !important; opacity: 0.40 !important; --rot: -10deg; animation: sportsFloat2 9.5s ease-in-out infinite; }
-        .deco-l-6 { top: 535px !important; left: 8.5% !important; width: 58px !important; height: 58px !important; opacity: 0.38 !important; --rot: 14deg; animation: sportsFloat3 12s ease-in-out infinite; }
-        .deco-l-7 { top: 35px !important; left: 23% !important; width: 38px !important; height: 38px !important; opacity: 0.32 !important; --rot: 15deg; animation: sportsFloat2 8s ease-in-out infinite; }
-        .deco-l-8 { top: 470px !important; left: 17% !important; width: 52px !important; height: 52px !important; opacity: 0.36 !important; --rot: -26deg; animation: sportsFloat1 10s ease-in-out infinite; }
+        /* Left zone - 10 items spanning down to bottom of laptop mockup */
+        .deco-l-1 { top: 30px !important; left: 2.5% !important; width: 68px !important; height: 68px !important; opacity: 0.22 !important; --rot: -12deg; animation: sportsFloat1 9s ease-in-out infinite; }
+        .deco-l-7 { top: 65px !important; left: 20% !important; width: 26px !important; height: 26px !important; opacity: 0.15 !important; --rot: 18deg; animation: sportsFloat2 8s ease-in-out infinite; }
+        .deco-l-2 { top: 155px !important; left: 11.5% !important; width: 52px !important; height: 52px !important; opacity: 0.18 !important; --rot: 24deg; animation: sportsFloat2 10.5s ease-in-out infinite; }
+        .deco-l-3 { top: 265px !important; left: 2% !important; width: 76px !important; height: 76px !important; opacity: 0.20 !important; --rot: -18deg; animation: sportsFloat3 8.5s ease-in-out infinite; }
+        .deco-l-4 { top: 390px !important; left: 13.5% !important; width: 34px !important; height: 34px !important; opacity: 0.16 !important; --rot: 10deg; animation: sportsFloat1 11s ease-in-out infinite; }
+        .deco-l-8 { top: 495px !important; left: 3.5% !important; width: 48px !important; height: 48px !important; opacity: 0.17 !important; --rot: -24deg; animation: sportsFloat1 10s ease-in-out infinite; }
+        .deco-l-5 { top: 630px !important; left: 15% !important; width: 28px !important; height: 28px !important; opacity: 0.14 !important; --rot: -10deg; animation: sportsFloat2 9.5s ease-in-out infinite; }
+        .deco-l-6 { top: 750px !important; left: 2.5% !important; width: 70px !important; height: 70px !important; opacity: 0.20 !important; --rot: 14deg; animation: sportsFloat3 12s ease-in-out infinite; }
+        .deco-l-9 { top: 890px !important; left: 11.5% !important; width: 38px !important; height: 38px !important; opacity: 0.16 !important; --rot: -15deg; animation: sportsFloat1 10s ease-in-out infinite; }
+        .deco-l-10 { top: 1020px !important; left: 3.5% !important; width: 58px !important; height: 58px !important; opacity: 0.20 !important; --rot: 20deg; animation: sportsFloat2 11s ease-in-out infinite; }
 
-        /* Right zone - 8 items */
-        .deco-r-1 { top: 30px !important; right: 13.5% !important; width: 68px !important; height: 68px !important; opacity: 0.44 !important; --rot: 14deg; animation: sportsFloat2 9s ease-in-out infinite; }
-        .deco-r-2 { top: 105px !important; right: 4% !important; width: 62px !important; height: 62px !important; opacity: 0.42 !important; --rot: -16deg; animation: sportsFloat1 10s ease-in-out infinite; }
-        .deco-r-3 { top: 210px !important; right: 13% !important; width: 68px !important; height: 68px !important; opacity: 0.45 !important; --rot: -22deg; animation: sportsFloat3 9.5s ease-in-out infinite; }
-        .deco-r-4 { top: 330px !important; right: 4.5% !important; width: 64px !important; height: 64px !important; opacity: 0.42 !important; --rot: 8deg; animation: sportsFloat2 11.5s ease-in-out infinite; }
-        .deco-r-5 { top: 440px !important; right: 11.5% !important; width: 58px !important; height: 58px !important; opacity: 0.40 !important; --rot: -12deg; animation: sportsFloat1 8.5s ease-in-out infinite; }
-        .deco-r-6 { top: 540px !important; right: 4% !important; width: 68px !important; height: 68px !important; opacity: 0.38 !important; --rot: 20deg; animation: sportsFloat3 10.5s ease-in-out infinite; }
-        .deco-r-7 { top: 30px !important; right: 25% !important; width: 40px !important; height: 40px !important; opacity: 0.34 !important; --rot: -14deg; animation: sportsFloat1 9s ease-in-out infinite; }
-        .deco-r-8 { top: 600px !important; right: 14% !important; width: 44px !important; height: 44px !important; opacity: 0.36 !important; --rot: 18deg; animation: sportsFloat2 11s ease-in-out infinite; }
+        /* Right zone - 10 items spanning down to bottom of laptop mockup */
+        .deco-r-7 { top: 35px !important; right: 21% !important; width: 30px !important; height: 30px !important; opacity: 0.15 !important; --rot: -16deg; animation: sportsFloat1 9s ease-in-out infinite; }
+        .deco-r-1 { top: 45px !important; right: 4.5% !important; width: 74px !important; height: 74px !important; opacity: 0.22 !important; --rot: 14deg; animation: sportsFloat2 9s ease-in-out infinite; }
+        .deco-r-2 { top: 170px !important; right: 13.5% !important; width: 44px !important; height: 44px !important; opacity: 0.18 !important; --rot: -18deg; animation: sportsFloat1 10s ease-in-out infinite; }
+        .deco-r-3 { top: 285px !important; right: 2.5% !important; width: 78px !important; height: 78px !important; opacity: 0.20 !important; --rot: -22deg; animation: sportsFloat3 9.5s ease-in-out infinite; }
+        .deco-r-8 { top: 405px !important; right: 14% !important; width: 24px !important; height: 24px !important; opacity: 0.14 !important; --rot: 18deg; animation: sportsFloat2 11s ease-in-out infinite; }
+        .deco-r-4 { top: 525px !important; right: 3% !important; width: 66px !important; height: 66px !important; opacity: 0.19 !important; --rot: 8deg; animation: sportsFloat2 11.5s ease-in-out infinite; }
+        .deco-r-5 { top: 655px !important; right: 13% !important; width: 42px !important; height: 42px !important; opacity: 0.17 !important; --rot: -12deg; animation: sportsFloat1 8.5s ease-in-out infinite; }
+        .deco-r-6 { top: 780px !important; right: 3% !important; width: 52px !important; height: 52px !important; opacity: 0.18 !important; --rot: 22deg; animation: sportsFloat3 10.5s ease-in-out infinite; }
+        .deco-r-9 { top: 905px !important; right: 12.5% !important; width: 28px !important; height: 28px !important; opacity: 0.14 !important; --rot: -14deg; animation: sportsFloat1 9.5s ease-in-out infinite; }
+        .deco-r-10 { top: 1025px !important; right: 4% !important; width: 70px !important; height: 70px !important; opacity: 0.20 !important; --rot: -10deg; animation: sportsFloat2 10.5s ease-in-out infinite; }
 
         @media (max-width: 1200px) {
-            .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8 { display: none !important; }
+            .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8, .deco-l-9, .deco-r-9 { display: none !important; }
             .sport-deco-item { transform: scale(0.85); }
         }
         @media (max-width: 900px) {
-            .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-5, .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8 { display: none !important; }
-            .sport-deco-item { opacity: 0.25 !important; }
+            .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-5, .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8, .deco-l-9, .deco-r-9, .deco-l-10, .deco-r-10 { display: none !important; }
+            .sport-deco-item { opacity: 0.14 !important; }
         }
         @media (max-width: 600px) {
-            .deco-l-1, .deco-r-2 { width: 44px !important; height: 44px !important; opacity: 0.20 !important; }
-            .deco-l-3, .deco-r-4, .deco-l-5, .deco-r-6, .deco-l-6, .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8 { display: none !important; }
+            .deco-l-1, .deco-r-2 { width: 40px !important; height: 40px !important; opacity: 0.12 !important; }
+            .deco-l-3, .deco-r-4, .deco-l-5, .deco-r-6, .deco-l-6, .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8, .deco-l-9, .deco-r-9, .deco-l-10, .deco-r-10 { display: none !important; }
         }
     </style>
 </head>
@@ -245,6 +251,23 @@
                             <path d="M46 53l7 8" stroke-width="4.8" stroke-linecap="round"/>
                         </svg>
                     </div>
+                    <!-- L9: Chess Knight flanking lower laptop screen -->
+                    <div class="sport-deco-item deco-l-9 deco-sport-chess" title="Chess Knight">
+                        <svg viewBox="0 0 448 512" fill="currentColor">
+                            <path d="M96 48L82.7 61.3C70.7 73.3 64 89.5 64 106.5l0 132.4c0 10.7 5.3 20.7 14.2 26.6l10.6 7c14.3 9.6 32.7 10.7 48.1 3l3.2-1.6c2.6-1.3 5-2.8 7.3-4.5l49.4-37c6.6-5 15.7-5 22.3 0c10.2 7.7 9.9 23.1-.7 30.3L90.4 350C73.9 361.3 64 380 64 400l320 0 28.9-159c2.1-11.3 3.1-22.8 3.1-34.3l0-14.7C416 86 330 0 224 0L83.8 0C72.9 0 64 8.9 64 19.8c0 7.5 4.2 14.3 10.9 17.7L96 48zm24 68a20 20 0 1 1 40 0 20 20 0 1 1 -40 0zM22.6 473.4c-4.2 4.2-6.6 10-6.6 16C16 501.9 26.1 512 38.6 512l370.7 0c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L384 432 64 432 22.6 473.4z"/>
+                        </svg>
+                    </div>
+                    <!-- L10: Badminton Shuttlecock flanking laptop base -->
+                    <div class="sport-deco-item deco-l-10 deco-sport-badminton" title="Badminton Shuttlecock">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M26 47c0 4.5 2.7 8 6 8s6-3.5 6-8v-3H26v3z" fill="currentColor" fill-opacity="0.25" stroke-width="2.2"/>
+                            <path d="M26 44L14 15h36L38 44H26z" fill="currentColor" fill-opacity="0.08"/>
+                            <path d="M18 24c4 1.2 9.5 2 14 2s10-0.8 14-2" stroke-width="1.8"/>
+                            <path d="M22 34c3 0.8 6.5 1.5 10 1.5s7-0.7 10-1.5" stroke-width="1.8"/>
+                            <path d="M20 15l6 29M26 15l3 29M32 15v29M38 15l-3 29M44 15l-6 29" stroke-width="1" opacity="0.6"/>
+                            <path d="M14 15c2-2 4-2 6 0 2-2 4-2 6 0 2-2 4-2 6 0 2-2 4-2 6 0" stroke-width="1.8"/>
+                        </svg>
+                    </div>
 
                     <!-- Right Side Items -->
                     <!-- R1: Genuine Chess Queen -->
@@ -324,6 +347,23 @@
                             <circle cx="32" cy="32" r="23" stroke-width="2.4" fill="currentColor" fill-opacity="0.08"/>
                             <path d="M16 17c8 5 11 13 9 21-2 5-6 9-11 11" stroke-width="2.2"/>
                             <path d="M48 47c-8-5-11-13-9-21 2-5 6-9 11-11" stroke-width="2.2"/>
+                        </svg>
+                    </div>
+                    <!-- R9: Tennis Ball flanking lower laptop screen -->
+                    <div class="sport-deco-item deco-r-9 deco-sport-tennis" title="Tennis Ball">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="32" r="23" stroke-width="2.4" fill="currentColor" fill-opacity="0.08"/>
+                            <path d="M16 17c8 5 11 13 9 21-2 5-6 9-11 11" stroke-width="2.2"/>
+                            <path d="M48 47c-8-5-11-13-9-21 2-5 6-9 11-11" stroke-width="2.2"/>
+                        </svg>
+                    </div>
+                    <!-- R10: Chess King flanking laptop base -->
+                    <div class="sport-deco-item deco-r-10 deco-sport-chess" title="Chess King">
+                        <svg viewBox="0 0 45 45" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke-linejoin="miter" d="M22.5 11.63V6M20 8h5"/>
+                            <path fill="currentColor" fill-opacity="0.2" stroke-linejoin="miter" d="M22.5 25s4.5-7.5 3-10.5c0 0-1-2.5-3-2.5s-3 2.5-3 2.5c-1.5 3 3 10.5 3 10.5"/>
+                            <path fill="currentColor" fill-opacity="0.16" d="M11.5 37c5.5 3.5 15.5 3.5 21 0v-7s9-4.5 6-10.5c-4-6.5-13.5-3.5-16 4V27v-3.5c-3.5-7.5-13-10.5-16-4-3 6 5 10 5 10z"/>
+                            <path d="M11.5 30c5.5-3 15.5-3 21 0m-21 3.5c5.5-3 15.5-3 21 0m-21 3.5c5.5-3 15.5-3 21 0"/>
                         </svg>
                     </div>
                 </div>
