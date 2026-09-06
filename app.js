@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const navItemsDesktop = document.querySelectorAll('#main-nav-desktop .nav-item');
     const navItemsMobile = document.querySelectorAll('#main-nav-mobile .mobile-nav-item');
+    const navItemsDock = document.querySelectorAll('#mobile-app-dock .mobile-dock-item');
     const spaPages = document.querySelectorAll('.spa-page');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuToggleBtn = document.getElementById('menu-toggle-btn');
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Close mobile nav menu if open
-        if (mobileMenu.classList.contains('open')) {
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
             toggleMobileMenu();
         }
 
@@ -83,6 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update active class on mobile navigation items
         navItemsMobile.forEach(item => {
+            if (item.getAttribute('data-target') === targetId) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+
+        // Update active class on mobile bottom app dock items
+        navItemsDock.forEach(item => {
             if (item.getAttribute('data-target') === targetId) {
                 item.classList.add('active');
             } else {
