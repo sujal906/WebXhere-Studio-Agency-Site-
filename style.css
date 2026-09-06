@@ -596,138 +596,180 @@ main {
     }
 }
 
-/* Left Zone Placements (matching orange circles in screenshot) */
+/* Left zone - 8 items */
 .deco-l-1 {
-    top: 30px;
-    left: 3%;
-    width: 72px;
-    height: 72px;
-    opacity: 0.45;
-    --rot: -14deg;
+    top: 25px;
+    left: 3.5%;
+    width: 68px;
+    height: 68px;
+    opacity: 0.44;
+    --rot: -12deg;
     animation: sportsFloat1 9s ease-in-out infinite;
 }
 
 .deco-l-2 {
-    top: 100px;
-    left: 13%;
-    width: 64px;
-    height: 64px;
+    top: 95px;
+    left: 13.5%;
+    width: 62px;
+    height: 62px;
     opacity: 0.40;
-    --rot: 24deg;
+    --rot: 22deg;
     animation: sportsFloat2 10.5s ease-in-out infinite;
 }
 
 .deco-l-3 {
-    top: 205px;
-    left: 3.5%;
-    width: 70px;
-    height: 70px;
+    top: 195px;
+    left: 3%;
+    width: 66px;
+    height: 66px;
     opacity: 0.45;
     --rot: -18deg;
     animation: sportsFloat3 8.5s ease-in-out infinite;
 }
 
 .deco-l-4 {
-    top: 325px;
+    top: 315px;
     left: 11%;
-    width: 64px;
-    height: 64px;
+    width: 62px;
+    height: 62px;
     opacity: 0.42;
     --rot: 10deg;
     animation: sportsFloat1 11s ease-in-out infinite;
 }
 
 .deco-l-5 {
-    top: 440px;
+    top: 425px;
     left: 3.8%;
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     opacity: 0.40;
-    --rot: -12deg;
+    --rot: -10deg;
     animation: sportsFloat2 9.5s ease-in-out infinite;
 }
 
 .deco-l-6 {
-    top: 540px;
-    left: 9.5%;
-    width: 60px;
-    height: 60px;
+    top: 535px;
+    left: 8.5%;
+    width: 58px;
+    height: 58px;
     opacity: 0.38;
-    --rot: 15deg;
+    --rot: 14deg;
     animation: sportsFloat3 12s ease-in-out infinite;
 }
 
-/* Right Zone Placements (matching orange circles in screenshot) */
-.deco-r-1 {
+.deco-l-7 {
     top: 35px;
-    right: 14%;
-    width: 72px;
-    height: 72px;
-    opacity: 0.45;
+    left: 23%;
+    width: 38px;
+    height: 38px;
+    opacity: 0.32;
+    --rot: 15deg;
+    animation: sportsFloat2 8s ease-in-out infinite;
+}
+
+.deco-l-8 {
+    top: 470px;
+    left: 17%;
+    width: 52px;
+    height: 52px;
+    opacity: 0.36;
+    --rot: -26deg;
+    animation: sportsFloat1 10s ease-in-out infinite;
+}
+
+/* Right zone - 8 items */
+.deco-r-1 {
+    top: 30px;
+    right: 13.5%;
+    width: 68px;
+    height: 68px;
+    opacity: 0.44;
     --rot: 14deg;
     animation: sportsFloat2 9s ease-in-out infinite;
 }
 
 .deco-r-2 {
-    top: 110px;
+    top: 105px;
     right: 4%;
-    width: 65px;
-    height: 65px;
+    width: 62px;
+    height: 62px;
     opacity: 0.42;
     --rot: -16deg;
     animation: sportsFloat1 10s ease-in-out infinite;
 }
 
 .deco-r-3 {
-    top: 220px;
+    top: 210px;
     right: 13%;
-    width: 72px;
-    height: 72px;
+    width: 68px;
+    height: 68px;
     opacity: 0.45;
-    --rot: -24deg;
+    --rot: -22deg;
     animation: sportsFloat3 9.5s ease-in-out infinite;
 }
 
 .deco-r-4 {
-    top: 340px;
-    right: 4.8%;
-    width: 62px;
-    height: 62px;
-    opacity: 0.40;
-    --rot: 12deg;
+    top: 330px;
+    right: 4.5%;
+    width: 64px;
+    height: 64px;
+    opacity: 0.42;
+    --rot: 8deg;
     animation: sportsFloat2 11.5s ease-in-out infinite;
 }
 
 .deco-r-5 {
-    top: 450px;
+    top: 440px;
     right: 11.5%;
-    width: 66px;
-    height: 66px;
-    opacity: 0.42;
-    --rot: -10deg;
+    width: 58px;
+    height: 58px;
+    opacity: 0.40;
+    --rot: -12deg;
     animation: sportsFloat1 8.5s ease-in-out infinite;
 }
 
 .deco-r-6 {
-    top: 550px;
+    top: 540px;
     right: 4%;
-    width: 72px;
-    height: 72px;
+    width: 68px;
+    height: 68px;
     opacity: 0.38;
     --rot: 20deg;
     animation: sportsFloat3 10.5s ease-in-out infinite;
 }
 
+.deco-r-7 {
+    top: 30px;
+    right: 25%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.34;
+    --rot: -14deg;
+    animation: sportsFloat1 9s ease-in-out infinite;
+}
+
+.deco-r-8 {
+    top: 600px;
+    right: 14%;
+    width: 44px;
+    height: 44px;
+    opacity: 0.36;
+    --rot: 18deg;
+    animation: sportsFloat2 11s ease-in-out infinite;
+}
+
 /* Tablet & Mobile Responsiveness */
 @media (max-width: 1200px) {
-    .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-3 {
-        opacity: 0.25;
+    .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8 {
+        display: none;
+    }
+    .sport-deco-item {
         transform: scale(0.85);
     }
 }
 
 @media (max-width: 900px) {
-    .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-5 {
+    .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-5, .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8 {
         display: none;
     }
     .sport-deco-item {
@@ -737,11 +779,11 @@ main {
 
 @media (max-width: 600px) {
     .deco-l-1, .deco-r-2 {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
         opacity: 0.20;
     }
-    .deco-l-3, .deco-r-4, .deco-l-5, .deco-r-6, .deco-l-6 {
+    .deco-l-3, .deco-r-4, .deco-l-5, .deco-r-6, .deco-l-6, .deco-l-7, .deco-r-7, .deco-l-8, .deco-r-8 {
         display: none;
     }
 }
