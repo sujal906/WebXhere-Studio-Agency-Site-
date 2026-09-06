@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const noteCounter = document.getElementById('c-note-counter');
 
     // Web3Forms API Key
-    const WEB3FORMS_ACCESS_KEY = '7df46c2e-37f1-4796-bdef-219840e575fe';
+    const WEB3FORMS_ACCESS_KEY = '75ea74ca-c78a-4e4e-a5fb-fa01750e0732';
 
     if (noteInput && noteCounter) {
         noteInput.addEventListener('input', () => {
