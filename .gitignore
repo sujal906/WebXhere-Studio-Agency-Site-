@@ -1,0 +1,13 @@
+﻿# Dependencies
+node_modules/
+
+# Local logs and agent transcripts
+conversation_history/
+*.log
+
+# Large unused original media (>100MB exceeds GitHub hard limit)
+assets/tennis_preview.mp4
+
+# OS / Environment files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <defs>
+        <linearGradient id="mercer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10B981" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+    </defs>
+    <circle cx="50" cy="50" r="46" fill="#0A0A0C" stroke="url(#mercer-grad)" stroke-width="2.5" />
+    <path d="M 40,65 C 40,65 30,55 45,40 C 60,25 75,30 75,30" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" />
+    <path d="M 60,65 C 60,65 70,55 55,40 C 40,25 25,30 25,30" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" />
+    <circle cx="50" cy="35" r="9" fill="#FBBF24" />
+    <circle cx="50" cy="35" r="9" fill="none" stroke="#D97706" stroke-width="1" />
+    <path d="M 46,31 A 9,9 0 0,0 54,39" fill="none" stroke="#FFFFFF" stroke-width="1" />
+    <path d="M 54,31 A 9,9 0 0,1 46,39" fill="none" stroke="#FFFFFF" stroke-width="1" />
+    <text x="50" y="78" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#E2E8F0" text-anchor="middle" letter-spacing="1">MERCER</text>
+    <text x="50" y="88" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#10B981" text-anchor="middle" letter-spacing="0.5">TENNIS</text>
+</svg>
