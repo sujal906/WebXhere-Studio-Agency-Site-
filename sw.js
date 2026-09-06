@@ -4,12 +4,12 @@
  * visits load instantly without redundant server/backend requests.
  */
 
-const CACHE_NAME = 'webxhere-cache-v2.0';
+const CACHE_NAME = 'webxhere-cache-v2.1';
 const CORE_ASSETS = [
     './',
     './index.html',
-    './style.css?v=7.0',
-    './app.js?v=2.5',
+    './style.css?v=7.1',
+    './app.js?v=2.6',
     './assets/logo.png'
 ];
 

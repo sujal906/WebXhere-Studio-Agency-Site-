@@ -3898,7 +3898,7 @@ video.macbook-screen-content {
     }
     
     .mobile-nav-toggle {
-        display: flex;
+        display: none !important;
     }
     
     .hero-title {
@@ -5442,6 +5442,385 @@ video.macbook-screen-content {
     html, body {
         overflow-x: hidden;
         max-width: 100vw;
+    }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVENESS FIXES: TESTIMONIALS, PROCESS & OPERATIONS HUD
+       ========================================================================== */
+
+    /* 1. TESTIMONIALS SECTION (MOBILE MARQUEE & POLISHED CARDS) */
+    .testimonials-section {
+        padding: 44px 0 54px !important;
+    }
+
+    .testimonials-section .section-title {
+        font-size: clamp(1.6rem, 6.2vw, 2.1rem) !important;
+        line-height: 1.25 !important;
+        padding: 0 10px;
+    }
+
+    .testimonials-section .section-subtitle {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials-marquee-viewport {
+        padding: 16px 0 12px !important;
+        mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 97%, transparent 100%) !important;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 97%, transparent 100%) !important;
+    }
+
+    .testimonials-marquee-track {
+        gap: 14px !important;
+        animation-duration: 65s !important; /* Gentle, readable pace on mobile screens */
+    }
+
+    .testimonials-marquee-viewport:hover .testimonials-marquee-track,
+    .testimonials-marquee-viewport:active .testimonials-marquee-track,
+    .testimonials-marquee-track:hover,
+    .testimonials-marquee-track:active {
+        animation-play-state: paused !important; /* Pause on tap/hold so user can read */
+    }
+
+    .testimonial-card {
+        width: 295px !important;
+        min-width: 295px !important;
+        max-width: 82vw !important;
+        padding: 18px 18px !important;
+        border-radius: 16px !important;
+        min-height: 215px !important;
+        gap: 12px !important;
+        background: linear-gradient(180deg, rgba(20, 27, 44, 0.82) 0%, rgba(11, 15, 26, 0.88) 100%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.09) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .tc-top {
+        gap: 8px !important;
+    }
+
+    .tc-star {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .tc-sport-tag {
+        font-size: 0.68rem !important;
+        padding: 2px 8px !important;
+    }
+
+    .tc-quote {
+        font-size: 0.84rem !important;
+        line-height: 1.55 !important;
+        color: #E2E8F0 !important;
+    }
+
+    .tc-author {
+        margin-top: auto !important;
+        padding-top: 10px !important;
+        gap: 10px !important;
+    }
+
+    .tc-avatar {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .tc-name {
+        font-size: 0.88rem !important;
+    }
+
+    .tc-role {
+        font-size: 0.72rem !important;
+        line-height: 1.35 !important;
+        color: #94A3B8 !important;
+        white-space: normal !important;
+    }
+
+    /* 2. "HOW WE LAUNCH YOUR WEBSITE" (PROCESS SECTION 1-COLUMN APP ROADMAP) */
+    .process-section {
+        padding: 48px 0 56px !important;
+    }
+
+    .process-section .section-title {
+        font-size: clamp(1.65rem, 6.2vw, 2.2rem) !important;
+        line-height: 1.25 !important;
+        padding: 0 10px;
+    }
+
+    .process-section .section-subtitle {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+        padding: 0 14px;
+        margin-bottom: 28px !important;
+    }
+
+    .process-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Stack vertically instead of squishing into 4 tiny columns */
+        gap: 14px !important;
+    }
+
+    .process-step {
+        padding: 18px 18px 18px 20px !important;
+        background: linear-gradient(135deg, rgba(17, 24, 39, 0.75) 0%, rgba(10, 14, 26, 0.85) 100%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-left: 3.5px solid var(--electric-blue) !important;
+        border-radius: 16px !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .process-step::before {
+        display: none !important;
+    }
+
+    .step-num {
+        font-size: 1.85rem !important;
+        font-weight: 800 !important;
+        line-height: 1 !important;
+        margin-bottom: 8px !important;
+        background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+
+    .process-step h3 {
+        font-size: 1.12rem !important;
+        font-weight: 700 !important;
+        color: #FFFFFF !important;
+        margin-bottom: 6px !important;
+    }
+
+    .process-step p {
+        font-size: 0.85rem !important;
+        line-height: 1.55 !important;
+        color: #94A3B8 !important;
+        margin: 0 !important;
+    }
+
+    /* 3. "24/7 AUTOMATED CLUB OPERATIONS" & "VIRTUAL CLUB ADMINISTRATOR" HUD */
+    .services-cta-section {
+        padding: 40px 0 56px !important;
+    }
+
+    .services-cta-card {
+        padding: 26px 16px !important;
+        border-radius: 18px !important;
+        background: linear-gradient(180deg, rgba(15, 21, 37, 0.85) 0%, rgba(9, 12, 22, 0.95) 100%) !important;
+    }
+
+    .services-cta-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .cta-live-badge {
+        font-size: 0.68rem !important;
+        letter-spacing: 0.8px !important;
+        padding: 5px 12px !important;
+        margin-bottom: 14px !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+    }
+
+    .services-cta-title {
+        font-size: clamp(1.45rem, 5.8vw, 1.85rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .services-cta-sub {
+        font-size: 0.86rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 20px !important;
+        color: #94A3B8 !important;
+    }
+
+    .services-cta-highlights {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        margin-bottom: 22px !important;
+    }
+
+    .cta-highlight-item {
+        padding: 10px 12px !important;
+        border-radius: 12px !important;
+        gap: 10px !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .highlight-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .highlight-svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .cta-highlight-item strong {
+        font-size: 0.84rem !important;
+    }
+
+    .cta-highlight-item span {
+        font-size: 0.72rem !important;
+    }
+
+    .services-cta-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .services-cta-actions .btn {
+        width: 100% !important;
+        min-height: 48px !important;
+        justify-content: center !important;
+        font-size: 0.9rem !important;
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+    }
+
+    .services-cta-trust-pills {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px 6px !important;
+        width: 100% !important;
+    }
+
+    .trust-pill {
+        font-size: 0.72rem !important;
+        gap: 5px !important;
+        line-height: 1.3 !important;
+    }
+
+    .trust-pill svg {
+        width: 13px !important;
+        height: 13px !important;
+    }
+
+    /* Virtual Club Administrator Card */
+    .admin-terminal-card {
+        border-radius: 16px !important;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .terminal-header {
+        padding: 10px 12px !important;
+        justify-content: space-between !important;
+        gap: 6px !important;
+    }
+
+    .terminal-dots {
+        display: none !important;
+    }
+
+    .terminal-title {
+        font-size: 0.72rem !important;
+        gap: 5px !important;
+    }
+
+    .terminal-status {
+        font-size: 0.65rem !important;
+        padding: 2px 7px !important;
+        white-space: nowrap !important;
+    }
+
+    .admin-feed-list {
+        padding: 10px 8px !important;
+        gap: 8px !important;
+    }
+
+    .feed-item {
+        padding: 10px 10px !important;
+        gap: 10px !important;
+        align-items: flex-start !important;
+        border-radius: 10px !important;
+    }
+
+    .feed-icon {
+        width: 30px !important;
+        height: 30px !important;
+        margin-top: 2px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .feed-icon svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .feed-details {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .feed-top {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 4px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .feed-title {
+        font-size: 0.76rem !important;
+        white-space: normal !important;
+        line-height: 1.25 !important;
+    }
+
+    .feed-time {
+        font-size: 0.64rem !important;
+        flex-shrink: 0 !important;
+    }
+
+    .feed-desc {
+        font-size: 0.7rem !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        line-height: 1.35 !important;
+        color: #94A3B8 !important;
+        margin-top: 2px !important;
+    }
+
+    .feed-tag {
+        font-size: 0.6rem !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
+        align-self: flex-start !important;
+        margin-top: 1px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .terminal-stats-strip {
+        padding: 10px 6px !important;
+        gap: 2px !important;
+    }
+
+    .stat-cell {
+        flex: 1 !important;
+        text-align: center !important;
+    }
+
+    .cell-val {
+        font-size: 0.92rem !important;
+    }
+
+    .cell-lbl {
+        font-size: 0.58rem !important;
+        letter-spacing: 0.2px !important;
+        line-height: 1.2 !important;
+    }
+
+    .stat-divider {
+        height: 18px !important;
     }
 }
 

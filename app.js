@@ -595,4 +595,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* 16. TESTIMONIALS TOUCH INTERACTION (MOBILE TOUCH-TO-PAUSE) */
+    const marqueeTrack = document.querySelector('.testimonials-marquee-track');
+    if (marqueeTrack) {
+        marqueeTrack.addEventListener('touchstart', () => {
+            marqueeTrack.style.animationPlayState = 'paused';
+        }, { passive: true });
+        marqueeTrack.addEventListener('touchend', () => {
+            marqueeTrack.style.animationPlayState = 'running';
+        }, { passive: true });
+        marqueeTrack.addEventListener('touchcancel', () => {
+            marqueeTrack.style.animationPlayState = 'running';
+        }, { passive: true });
+    }
+
 });
