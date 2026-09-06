@@ -521,9 +521,10 @@ main {
    ========================================================================== */
 .hero-sports-decorations {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 700px;
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
@@ -551,20 +552,20 @@ main {
     transform: scaleX(-1);
 }
 
-/* Specific Sport Color & Glow Accents */
+/* Sport Theme Colors with Vibrant Ambient Glow */
 .sport-deco-item.deco-sport-chess {
     color: #78b0f4;
-    filter: drop-shadow(0 0 14px rgba(120, 176, 244, 0.28));
+    filter: drop-shadow(0 0 10px rgba(0, 110, 255, 0.75)) drop-shadow(0 0 20px rgba(120, 176, 244, 0.45));
 }
 
 .sport-deco-item.deco-sport-tennis {
     color: #60a5fa;
-    filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.24));
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.75)) drop-shadow(0 0 20px rgba(96, 165, 250, 0.45));
 }
 
 .sport-deco-item.deco-sport-badminton {
     color: #93c5fd;
-    filter: drop-shadow(0 0 12px rgba(147, 197, 253, 0.24));
+    filter: drop-shadow(0 0 10px rgba(147, 197, 253, 0.75)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.4));
 }
 
 /* Subtle Organic Floating Keyframes */
@@ -597,122 +598,122 @@ main {
 
 /* Left Zone Placements (matching orange circles in screenshot) */
 .deco-l-1 {
-    top: 6%;
-    left: 3.5%;
-    width: 70px;
-    height: 70px;
-    opacity: 0.18;
+    top: 30px;
+    left: 3%;
+    width: 72px;
+    height: 72px;
+    opacity: 0.45;
     --rot: -14deg;
     animation: sportsFloat1 9s ease-in-out infinite;
 }
 
 .deco-l-2 {
-    top: 14%;
-    left: 12.5%;
-    width: 58px;
-    height: 58px;
-    opacity: 0.15;
+    top: 100px;
+    left: 13%;
+    width: 64px;
+    height: 64px;
+    opacity: 0.40;
     --rot: 24deg;
     animation: sportsFloat2 10.5s ease-in-out infinite;
 }
 
 .deco-l-3 {
-    top: 27%;
-    left: 3.2%;
-    width: 64px;
-    height: 64px;
-    opacity: 0.18;
+    top: 205px;
+    left: 3.5%;
+    width: 70px;
+    height: 70px;
+    opacity: 0.45;
     --rot: -18deg;
     animation: sportsFloat3 8.5s ease-in-out infinite;
 }
 
 .deco-l-4 {
-    top: 43%;
-    left: 10.5%;
-    width: 56px;
-    height: 56px;
-    opacity: 0.15;
+    top: 325px;
+    left: 11%;
+    width: 64px;
+    height: 64px;
+    opacity: 0.42;
     --rot: 10deg;
     animation: sportsFloat1 11s ease-in-out infinite;
 }
 
 .deco-l-5 {
-    top: 58%;
+    top: 440px;
     left: 3.8%;
-    width: 48px;
-    height: 48px;
-    opacity: 0.14;
+    width: 52px;
+    height: 52px;
+    opacity: 0.40;
     --rot: -12deg;
     animation: sportsFloat2 9.5s ease-in-out infinite;
 }
 
 .deco-l-6 {
-    top: 72%;
-    left: 9%;
-    width: 54px;
-    height: 54px;
-    opacity: 0.13;
+    top: 540px;
+    left: 9.5%;
+    width: 60px;
+    height: 60px;
+    opacity: 0.38;
     --rot: 15deg;
     animation: sportsFloat3 12s ease-in-out infinite;
 }
 
 /* Right Zone Placements (matching orange circles in screenshot) */
 .deco-r-1 {
-    top: 7%;
+    top: 35px;
     right: 14%;
-    width: 66px;
-    height: 66px;
-    opacity: 0.18;
+    width: 72px;
+    height: 72px;
+    opacity: 0.45;
     --rot: 14deg;
     animation: sportsFloat2 9s ease-in-out infinite;
 }
 
 .deco-r-2 {
-    top: 16%;
-    right: 4.5%;
-    width: 58px;
-    height: 58px;
-    opacity: 0.16;
+    top: 110px;
+    right: 4%;
+    width: 65px;
+    height: 65px;
+    opacity: 0.42;
     --rot: -16deg;
     animation: sportsFloat1 10s ease-in-out infinite;
 }
 
 .deco-r-3 {
-    top: 29%;
-    right: 13.5%;
-    width: 65px;
-    height: 65px;
-    opacity: 0.17;
+    top: 220px;
+    right: 13%;
+    width: 72px;
+    height: 72px;
+    opacity: 0.45;
     --rot: -24deg;
     animation: sportsFloat3 9.5s ease-in-out infinite;
 }
 
 .deco-r-4 {
-    top: 43%;
+    top: 340px;
     right: 4.8%;
-    width: 52px;
-    height: 52px;
-    opacity: 0.15;
+    width: 62px;
+    height: 62px;
+    opacity: 0.40;
     --rot: 12deg;
     animation: sportsFloat2 11.5s ease-in-out infinite;
 }
 
 .deco-r-5 {
-    top: 57%;
-    right: 12%;
-    width: 60px;
-    height: 60px;
-    opacity: 0.16;
+    top: 450px;
+    right: 11.5%;
+    width: 66px;
+    height: 66px;
+    opacity: 0.42;
     --rot: -10deg;
     animation: sportsFloat1 8.5s ease-in-out infinite;
 }
 
 .deco-r-6 {
-    top: 71%;
-    right: 3.5%;
-    width: 66px;
-    height: 66px;
-    opacity: 0.14;
+    top: 550px;
+    right: 4%;
+    width: 72px;
+    height: 72px;
+    opacity: 0.38;
     --rot: 20deg;
     animation: sportsFloat3 10.5s ease-in-out infinite;
 }
@@ -720,7 +721,7 @@ main {
 /* Tablet & Mobile Responsiveness */
 @media (max-width: 1200px) {
     .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-3 {
-        opacity: 0.10;
+        opacity: 0.25;
         transform: scale(0.85);
     }
 }
@@ -730,15 +731,15 @@ main {
         display: none;
     }
     .sport-deco-item {
-        opacity: 0.10;
+        opacity: 0.25;
     }
 }
 
 @media (max-width: 600px) {
     .deco-l-1, .deco-r-2 {
-        width: 44px;
-        height: 44px;
-        opacity: 0.08;
+        width: 48px;
+        height: 48px;
+        opacity: 0.20;
     }
     .deco-l-3, .deco-r-4, .deco-l-5, .deco-r-6, .deco-l-6 {
         display: none;

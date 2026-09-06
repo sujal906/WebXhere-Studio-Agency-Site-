@@ -12,8 +12,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom Style Sheet (with cache buster) -->
+    <link rel="stylesheet" href="style.css?v=3.1">
+    <!-- Hero Sports Atmosphere CSS fallback & immediate override -->
+    <style id="hero-sports-decorations-css">
+        .hero-sports-decorations {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            height: 700px !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+            overflow: hidden !important;
+            user-select: none !important;
+        }
+        .sport-deco-item {
+            position: absolute !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            pointer-events: none !important;
+            user-select: none !important;
+            will-change: transform;
+            transition: opacity 0.4s ease;
+        }
+        .sport-deco-item svg {
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+        }
+        .sport-deco-item.deco-flip svg {
+            transform: scaleX(-1);
+        }
+        .sport-deco-item.deco-sport-chess {
+            color: #78b0f4 !important;
+            filter: drop-shadow(0 0 10px rgba(0, 110, 255, 0.75)) drop-shadow(0 0 20px rgba(120, 176, 244, 0.45)) !important;
+        }
+        .sport-deco-item.deco-sport-tennis {
+            color: #60a5fa !important;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.75)) drop-shadow(0 0 20px rgba(96, 165, 250, 0.45)) !important;
+        }
+        .sport-deco-item.deco-sport-badminton {
+            color: #93c5fd !important;
+            filter: drop-shadow(0 0 10px rgba(147, 197, 253, 0.75)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.4)) !important;
+        }
+        @keyframes sportsFloat1 {
+            0%, 100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+            50% { transform: translateY(-12px) rotate(calc(var(--rot, 0deg) + 3deg)); }
+        }
+        @keyframes sportsFloat2 {
+            0%, 100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+            50% { transform: translateY(11px) rotate(calc(var(--rot, 0deg) - 2.5deg)); }
+        }
+        @keyframes sportsFloat3 {
+            0%, 100% { transform: translateY(0px) scale(1) rotate(var(--rot, 0deg)); }
+            50% { transform: translateY(-9px) scale(1.03) rotate(calc(var(--rot, 0deg) + 2deg)); }
+        }
+        .deco-l-1 { top: 30px !important; left: 3% !important; width: 72px !important; height: 72px !important; opacity: 0.45 !important; --rot: -14deg; animation: sportsFloat1 9s ease-in-out infinite; }
+        .deco-l-2 { top: 100px !important; left: 13% !important; width: 64px !important; height: 64px !important; opacity: 0.40 !important; --rot: 24deg; animation: sportsFloat2 10.5s ease-in-out infinite; }
+        .deco-l-3 { top: 205px !important; left: 3.5% !important; width: 70px !important; height: 70px !important; opacity: 0.45 !important; --rot: -18deg; animation: sportsFloat3 8.5s ease-in-out infinite; }
+        .deco-l-4 { top: 325px !important; left: 11% !important; width: 64px !important; height: 64px !important; opacity: 0.42 !important; --rot: 10deg; animation: sportsFloat1 11s ease-in-out infinite; }
+        .deco-l-5 { top: 440px !important; left: 3.8% !important; width: 52px !important; height: 52px !important; opacity: 0.40 !important; --rot: -12deg; animation: sportsFloat2 9.5s ease-in-out infinite; }
+        .deco-l-6 { top: 540px !important; left: 9.5% !important; width: 60px !important; height: 60px !important; opacity: 0.38 !important; --rot: 15deg; animation: sportsFloat3 12s ease-in-out infinite; }
+        .deco-r-1 { top: 35px !important; right: 14% !important; width: 72px !important; height: 72px !important; opacity: 0.45 !important; --rot: 14deg; animation: sportsFloat2 9s ease-in-out infinite; }
+        .deco-r-2 { top: 110px !important; right: 4% !important; width: 65px !important; height: 65px !important; opacity: 0.42 !important; --rot: -16deg; animation: sportsFloat1 10s ease-in-out infinite; }
+        .deco-r-3 { top: 220px !important; right: 13% !important; width: 72px !important; height: 72px !important; opacity: 0.45 !important; --rot: -24deg; animation: sportsFloat3 9.5s ease-in-out infinite; }
+        .deco-r-4 { top: 340px !important; right: 4.8% !important; width: 62px !important; height: 62px !important; opacity: 0.40 !important; --rot: 12deg; animation: sportsFloat2 11.5s ease-in-out infinite; }
+        .deco-r-5 { top: 450px !important; right: 11.5% !important; width: 66px !important; height: 66px !important; opacity: 0.42 !important; --rot: -10deg; animation: sportsFloat1 8.5s ease-in-out infinite; }
+        .deco-r-6 { top: 550px !important; right: 4% !important; width: 72px !important; height: 72px !important; opacity: 0.38 !important; --rot: 20deg; animation: sportsFloat3 10.5s ease-in-out infinite; }
+        @media (max-width: 1200px) {
+            .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-3 { opacity: 0.25 !important; transform: scale(0.85); }
+        }
+        @media (max-width: 900px) {
+            .deco-l-2, .deco-r-1, .deco-l-4, .deco-r-5 { display: none !important; }
+            .sport-deco-item { opacity: 0.25 !important; }
+        }
+        @media (max-width: 600px) {
+            .deco-l-1, .deco-r-2 { width: 48px !important; height: 48px !important; opacity: 0.20 !important; }
+            .deco-l-3, .deco-r-4, .deco-l-5, .deco-r-6, .deco-l-6 { display: none !important; }
+        }
+    </style>
 </head>
 <body>
     <!-- Background Glow Elements -->
