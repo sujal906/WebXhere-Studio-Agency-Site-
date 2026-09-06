@@ -486,4 +486,103 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3200);
     }
 
+    /* ==========================================================================
+       15. COOKIE CONSENT & HIGH-SPEED DEVICE CACHING SYSTEM
+       ========================================================================== */
+    const cookieBanner = document.getElementById('wxh-cookie-banner');
+    const acceptAllBtn = document.getElementById('wxh-cookie-accept-all');
+    const essentialBtn = document.getElementById('wxh-cookie-essential');
+    const closeCookieBtn = document.getElementById('wxh-cookie-close');
+    const reopenCookieBtn = document.getElementById('wxh-reopen-cookies');
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
+    }
+
+    function getCookie(name) {
+        return document.cookie.split('; ').reduce((r, v) => {
+            const parts = v.split('=');
+            return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+        }, '');
+    }
+
+    function registerDeviceCachingWorker() {
+        if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+            navigator.serviceWorker.register('./sw.js').then((reg) => {
+                // Check for updates
+                if (reg && reg.update) {
+                    reg.update();
+                }
+            }).catch((err) => {
+                console.info('[WebXhere Caching] Service worker initialized:', err.message || err);
+            });
+        }
+    }
+
+    function hideCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.add('closing');
+        setTimeout(() => {
+            cookieBanner.classList.remove('active');
+            cookieBanner.classList.remove('closing');
+        }, 380);
+    }
+
+    function showCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.remove('closing');
+        cookieBanner.classList.add('active');
+    }
+
+    // Initialize Cookie & Cache System
+    const existingConsent = localStorage.getItem('webxhere_cookie_consent') || getCookie('webxhere_cookie_consent');
+
+    if (existingConsent === 'all') {
+        // User previously approved caching -> ensure Service Worker is running
+        registerDeviceCachingWorker();
+    } else if (!existingConsent) {
+        // First-time visit: Display banner after gentle 900ms delay
+        setTimeout(() => {
+            showCookieBanner();
+        }, 900);
+    }
+
+    // Event: Accept All Cookies & Enable Device Caching
+    if (acceptAllBtn) {
+        acceptAllBtn.addEventListener('click', () => {
+            setCookie('webxhere_cookie_consent', 'all', 365);
+            localStorage.setItem('webxhere_cookie_consent', 'all');
+            localStorage.setItem('webxhere_cached_at', new Date().toISOString());
+            registerDeviceCachingWorker();
+            hideCookieBanner();
+        });
+    }
+
+    // Event: Essential Only
+    if (essentialBtn) {
+        essentialBtn.addEventListener('click', () => {
+            setCookie('webxhere_cookie_consent', 'essential', 180);
+            localStorage.setItem('webxhere_cookie_consent', 'essential');
+            hideCookieBanner();
+        });
+    }
+
+    // Event: Dismiss / Close button
+    if (closeCookieBtn) {
+        closeCookieBtn.addEventListener('click', () => {
+            setCookie('webxhere_cookie_consent', 'dismissed', 30);
+            localStorage.setItem('webxhere_cookie_consent', 'dismissed');
+            hideCookieBanner();
+        });
+    }
+
+    // Event: Footer "Cookie Preferences" Re-open Trigger
+    if (reopenCookieBtn) {
+        reopenCookieBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showCookieBanner();
+        });
+    }
+
 });

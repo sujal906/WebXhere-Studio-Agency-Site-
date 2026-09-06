@@ -2877,13 +2877,50 @@
         </div>
         <div class="footer-bottom text-center">
             <div class="container">
-                <p>&copy; 2026 WEBXHERE. Built specifically for Chess, Tennis and Badminton clubs. All rights reserved.</p>
+                <p>&copy; 2026 WEBXHERE. Built specifically for Chess, Tennis and Badminton clubs. All rights reserved. &bull; <a href="javascript:void(0)" id="wxh-reopen-cookies" class="footer-cookie-link">Cookie Preferences</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- ================= COOKIE CONSENT & DEVICE CACHING BANNER ================= -->
+    <div id="wxh-cookie-banner" class="wxh-cookie-banner" role="dialog" aria-modal="true" aria-labelledby="wxh-cookie-title" aria-describedby="wxh-cookie-desc">
+        <div class="wxh-cookie-card">
+            <div class="wxh-cookie-header">
+                <div class="wxh-cookie-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wxh-cookie-icon">
+                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                        <path d="M8.5 8.5v.01"></path>
+                        <path d="M7.5 15.5v.01"></path>
+                        <path d="M12 12v.01"></path>
+                        <path d="M11 17v.01"></path>
+                        <path d="M16 16v.01"></path>
+                    </svg>
+                    <span>Fast Caching &amp; Cookies</span>
+                </div>
+                <button type="button" id="wxh-cookie-close" class="wxh-cookie-close-btn" aria-label="Dismiss cookie notice">&times;</button>
+            </div>
+            <div class="wxh-cookie-body">
+                <h4 id="wxh-cookie-title" class="wxh-cookie-heading">Device Storage &amp; Cookies</h4>
+                <p id="wxh-cookie-desc" class="wxh-cookie-text">
+                    We use cookies and high-speed local browser caching so site assets save directly on your device. This eliminates redundant server roundtrips, ensures near-instant repeat page loads, and keeps your preferences active.
+                </p>
+            </div>
+            <div class="wxh-cookie-actions">
+                <button type="button" id="wxh-cookie-accept-all" class="btn btn-primary wxh-cookie-btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-check-icon">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Accept All &amp; Cache
+                </button>
+                <button type="button" id="wxh-cookie-essential" class="btn btn-secondary wxh-cookie-btn-secondary">
+                    Essential Only
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Custom Script -->
-    <script src="app.js"></script>
+    <script src="app.js?v=2.0"></script>
     <!-- WebXHere AI Chatbot -->
     <script src="chatbot.js" defer></script>
 </body>

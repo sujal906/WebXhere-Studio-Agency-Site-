@@ -5040,3 +5040,180 @@ video.macbook-screen-content {
     line-height: 1.35;
 }
 
+/* ==========================================================================
+   COOKIE CONSENT & DEVICE CACHING BANNER
+   ========================================================================== */
+.wxh-cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 99990;
+    max-width: 440px;
+    width: calc(100% - 48px);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wxh-cookie-banner.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.wxh-cookie-banner.closing {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+    pointer-events: none;
+}
+
+.wxh-cookie-card {
+    background: rgba(11, 15, 26, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(120, 176, 244, 0.25);
+    border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: 
+        0 24px 60px rgba(0, 0, 0, 0.75),
+        0 0 35px rgba(0, 110, 255, 0.14),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.wxh-cookie-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.wxh-cookie-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #78b0f4;
+    background: rgba(0, 110, 255, 0.12);
+    border: 1px solid rgba(120, 176, 244, 0.28);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.wxh-cookie-icon {
+    width: 15px;
+    height: 15px;
+    color: #78b0f4;
+    flex-shrink: 0;
+}
+
+.wxh-cookie-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.wxh-cookie-close-btn:hover {
+    color: var(--text-primary);
+    transform: scale(1.15);
+}
+
+.wxh-cookie-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.wxh-cookie-text {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin-bottom: 18px;
+}
+
+.wxh-cookie-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.wxh-cookie-btn-primary {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.wxh-cookie-btn-primary .btn-check-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.wxh-cookie-btn-secondary {
+    padding: 10px 14px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.wxh-cookie-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.footer-cookie-link {
+    color: #94a3b8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+    margin-left: 8px;
+}
+
+.footer-cookie-link:hover {
+    color: #78b0f4;
+}
+
+@media (max-width: 600px) {
+    .wxh-cookie-banner {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+    .wxh-cookie-card {
+        border-radius: 20px 20px 0 0;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        padding: 18px 18px 24px;
+    }
+    .wxh-cookie-actions {
+        flex-direction: column;
+    }
+    .wxh-cookie-btn-primary,
+    .wxh-cookie-btn-secondary {
+        width: 100%;
+    }
+}
+
