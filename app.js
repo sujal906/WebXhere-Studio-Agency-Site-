@@ -100,6 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Send Google Analytics page_view event on SPA route switch
+        if (typeof gtag === 'function') {
+            try {
+                gtag('event', 'page_view', {
+                    page_title: 'WebXhere — ' + targetId.charAt(0).toUpperCase() + targetId.slice(1),
+                    page_path: '#' + targetId
+                });
+            } catch(e) {}
+        }
+
         // Scroll to top of window with smooth animation (unless pricing was requested)
         if (window.location.hash !== '#pricing') {
             window.scrollTo({ top: 0, behavior: 'smooth' });

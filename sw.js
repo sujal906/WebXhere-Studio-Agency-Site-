@@ -9,7 +9,7 @@ const CORE_ASSETS = [
     './',
     './index.html',
     './style.css?v=7.2',
-    './app.js?v=2.6',
+    './app.js?v=2.7',
     './assets/logo.png'
 ];
 
